@@ -1,0 +1,11 @@
+Que. No.	Question Description	Marks	CO No.	BT Level
+A	Create the Following table in HTML
+Sr. No	First Name	Middle Name	Last Name 	Email
+				
+	2	CO2	L3
+B	Create a registration form using HTML form input elements viz. textbox, text area, radio button and drop down menu, check box, submit, file and reset button. Field should contain name, address, birth-date, qualification, email, phone number, gender, comments, attach photo etc. Use HTML Form elements wherever required. Align all elements using table.	4	CO2	L3
+C	Create a HTML programs using frames. Three frames displaying three different HTML files.
+I.	Frame 01 – contain examples of ordered as well as unordered list
+II.	Frame 02 – contain examples of text formatting tags i.e. <b>, <i>, <u>, <h1>--<h6>, <p>, <sup> and <sub>
+III.	Frame 03 – contain example of 3 by 4 table with data.
+IV.	Create a hyperlink in Frame 01 that opens in Frame 03
