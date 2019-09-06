@@ -1,0 +1,64 @@
+body{
+    background-size: cover;
+    text-align: center;
+}
+.header{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 17%;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 1cm;
+    margin-top: 0%;
+}
+.hornav {
+  background: black;
+  overflow: hidden;
+  top:0%;
+}
+#horitem a{
+  color: purple;
+  text-align: center;
+  font-size: 19;
+  padding:20px;
+  float: left;
+  background: black;
+  text-decoration: none;
+} 
+#horitem a:hover {
+  background-color: rgb(42, 125, 128);
+  color: black;
+}
+.hornav  a:active {
+  background-color: rgb(100, 255, 10);
+  color:dimgrey;
+}
+form{
+    margin-left: 30px;
+    align-content: center;
+}
+input[type=text],select,textarea {
+  width: 330px;
+  margin: 8px 0;
+  padding: 14px 20px 15px 15px;
+  border: 1px solid dimgrey;
+}
+#submit{
+    width: 100px;
+  background-color:#24d842;
+  color: white;
+  padding: 14px 20px 15px 15px;
+  margin: 8px 0;
+  margin-right: 12cm;
+  border-radius: 4px;
+}
+#reset{
+    background-color: crimson;
+}
+#password{
+    -webkit-text-security: disc ;
+}
+label{
+    color: cornsilk;
+    text-align: center
+}
