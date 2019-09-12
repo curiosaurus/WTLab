@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        table{
+            margin-left : 40%;
+            margin-top : 10%;  
+        }
+        input[type=button]{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="texarea" id="screen" style="text-align:right">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" id="1" onclick="addnum(1)">
+            </td>
+            <td>
+                <input type="button" value="2" id="2" onclick="addnum(2)">
+            </td>
+            <td>
+                <input type="button" value="3" id="3" onclick="addnum(3)">
+            </td>
+            <td>
+                <input type="button" value="+" id="+" onclick="addnum('+')" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" id="4" onclick="addnum(4)">
+            </td>
+            <td>
+                <input type="button" value="5" id="5" onclick="addnum(5)">
+            </td>
+            <td>
+                <input type="button" value="6" id="6" onclick="addnum(6)">
+            </td>
+            <td>
+                <input type="button" value="-" id="-" onclick="addnum('-')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" id="7" onclick="addnum(7)">
+            </td>
+            <td>
+                <input type="button" value="8" id="8" onclick="addnum(8)">
+            </td>
+            <td>
+                <input type="button" value="9" id="9" onclick="addnum(9)">
+            </td>
+            <td>
+                <input type="button" value="*" id="*" onclick="addnum('*')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" id="0" onclick="addnum(0)">
+            </td>
+            <td colspan="2">
+                <input type="button" value="=" id="=" style="width: 100%" onclick="result()">
+            </td>
+            <td>
+                <input type="button" value="/" id="/" onclick="addnum('/')">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="button" value="Clear" onclick="document.getElementById('screen').value = '' ">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function clearscr(){
+            document.getElementById("screen").value += num;
+        }
+        function addnum(num){
+            document.getElementById("screen").value += num;
+        }
+        function result(){
+            try{
+            var str=document.getElementById("screen").value;
+            for (const i in str) {
+                if (str.hasOwnProperty(i)) {
+                    const element = str[i];
+                    if (isNaN(element)){
+                        var op = element; 
+                    }
+                }              
+            }
+            var ind = str.indexOf(op);//123+123
+            var opr1 = parseInt(str.slice(0,ind));
+            var opr2 = parseInt(str.slice(ind+1,str.length));
+            if (op == "+"){
+                document.getElementById("screen").value=(opr1+opr2);
+            }
+            else if(op == "-"){
+                document.getElementById("screen").value=(opr1-opr2);
+            }
+            else if(op == "*"){
+                document.getElementById("screen").value=(opr1*opr2);
+            }
+            else if(op == "/"){
+                document.getElementById("screen").value=(opr1/opr2);
+            }
+            }
+            catch (error) {
+                alert("Error occored");
+            }
+            if(document.getElementById("screen").value=="NaN"){
+                alert("Not valid input");
+                document.getElementById("screen").value="";
+            }
+        }
+        function oprclicked(op){
+            opr1 = document.getElementById("screen").value
+            op = op
+        }
+    </script>
+</body>
+</html>
