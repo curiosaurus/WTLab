@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#clc >  table{
+    align-self: center;
+    background-color: dimgray;
+    color: darkorange;
+}
+</style>
+</head>
+<script>
+function showClock() {
+  var now = new Date();
+  var hrs = now.getHours();
+  var min = now.getMinutes();
+  var sec = now.getSeconds();
+  if (hrs < 10) hrs = "0" + hrs;
+  if (min < 10) min = "0" + min;
+  if (sec < 10) sec = "0" + sec;
+  document.getElementById('clc').innerHTML =
+  "<table border='2px'><tr> <th>Hrs</th> <th>min</th> <th>sec</th> </tr> <tr> <td>"+ hrs + "</td><td>" + min + "</td><td>" + sec+"</td></tr></table>";
+  var t = setTimeout(showClock, 1000);
+}
+</script>
+<body onload="showClock()">
+<br><br>
+<div id="clc" style="align-content: center; "></div>
+</body>
+</html>
